@@ -1,0 +1,19 @@
+.movie-card {
+  margin: 15px 0 0 35px;
+  background-color: #352f44;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-card img {
+  border-radius: 15px;
+  margin: 15px 0 15px 0;
+}
+
+.movie-card p {
+  margin: 0 0 15px 0;
+  color: #f4eee0;
+}
