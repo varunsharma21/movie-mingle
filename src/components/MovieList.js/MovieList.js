@@ -6,7 +6,15 @@ const MovieList = (props) => {
   return (
     <div className={styles["movie-list"]}>
       {props.movies.map((movie) => (
-        <MovieCard title={movie.title} poster={movie.poster} />
+        <MovieCard
+          id={movie.id}
+          title={movie.title}
+          poster={movie.poster}
+          adult={movie.adult}
+          rating={movie.rating}
+          backdrop={movie.backdrop}
+          overview={movie.overview}
+        />
       ))}
     </div>
   );

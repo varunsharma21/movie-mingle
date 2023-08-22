@@ -3,9 +3,22 @@ import styles from "./MovieCard.module.css";
 import { useNavigate } from "react-router-dom";
 
 const MovieCard = (props) => {
-  const { poster, title } = props;
+  const navigate = useNavigate();
 
-  const showMovieInfoHandler = () => {};
+  const { id, title, poster, adult, rating, backdrop, overview } = props;
+  const data = {
+    id: id,
+    title: title,
+    poster: poster,
+    adult: adult,
+    rating: rating,
+    backdrop: backdrop,
+    overview: overview,
+  };
+
+  const showMovieInfoHandler = () => {
+    navigate("/description", { state: data });
+  };
 
   return (
     <div className={styles["movie-card"]} onClick={showMovieInfoHandler}>
